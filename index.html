@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <title>Neural Models of Artistic Style</title>
+  <meta name="author" content="Kevin Zuern">
+  <meta name="description" content="This presentation gives a quick introduction to current research in artistic style transfer.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw=" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="presentation.css">
+</head>
+<body class="impress-not-supported">
+  <div class="fallback-message">
+    <p>Your browser <span style="text-decoration: line-through;">sucks</span> doesn't support the features required by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+  </div>
+
+  <div id="impress">
+
+    <div id="title" class="step">
+      <h1>Perception of Artistic Style</h1>
+      <p class="footnote">Kevin Zuern</p>
+      <p class="footnote">Queen's University</p>
+    </div>
+
+    <div class="step">
+      <h2>Overview</h2>
+      <p>
+        In this presentation we will talk about current research in artistic style transfer. We will look at a novel approach to representing artistic style in a neural network as well as some further developments that have been since been published.
+      </p>
+      <p>
+        We will be focusing on the Gatys et. al. paper "<a href="http://jov.arvojournals.org/article.aspx?articleid=2550311" title="A Neural Algorithm of Artistic Style">A Neural Algorithm of Artistic Style</a>". Their novel technique allows one to apply the artistic style of a reference image to an arbitrary source image.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Examples</h2>
+      <a href="https://www.researchgate.net/profile/Alexander_Ecker/publication/281312423/figure/fig1/AS:391530486485004@1470359550795/Figure-2-Images-that-combine-the-content-of-a-photograph-with-the-style-of-several.ppm"><img src="https://www.researchgate.net/profile/Alexander_Ecker/publication/281312423/figure/fig1/AS:391530486485004@1470359550795/Figure-2-Images-that-combine-the-content-of-a-photograph-with-the-style-of-several.ppm" alt="Examples of neural style applied to images" target="_blank"></a>
+    </div>
+
+    <div class="step">
+      <h2>Terminology</h2>
+      <div class="flex">
+        <div class="flex-fill">
+          <h3>
+            Content
+          </h3>
+          <p>
+            The subject of an image. In the example the content is a night sky and a town in a valley.
+          </p>
+          <h3>
+            Style
+          </h3>
+          <p>
+            The result of an artist's subjective interpretation of a scene.
+          </p>
+        </div>
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="The Starry Night - Van Gogh" style="max-height: 50vh; display: block;">
+          <figcaption>The Starry Night - Van Gogh</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>How Does it Work?</h2>
+      <p>
+        They use a convolutional neural network (ANN built to mimic structure &amp; properties of visual cortex in brain) as the basis for the algorithm.
+      </p>
+      <p>
+        Each layer in the CNN consists of a collection of neurons acting like image filters. Each neuron extracts a certain feature from the image. The higher level layers care less about the pixel values and more about the content of the image.
+      </p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/impressjs/0.5.3/impress.js" integrity="sha256-JjE2XVpHR8iApLdUSrSC5V2OlLthwHXjtFjs8RbXM3I=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="site.js"></script>
+</body>
+</html>

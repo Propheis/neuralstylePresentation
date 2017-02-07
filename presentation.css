@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed|Playfair+Display');
+
+body {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  background: url('img/bg.png');
+}
+
+p {
+  line-height: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+
+#title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#title h1 {
+  font-size: 2em;
+}
+
+.impress-supported .fallback-message { display: none; }
+
+.step {
+  width: 95vw;
+  height: 95vh;
+  background: #fff;
+  padding: 5vw;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+.flex > * {
+  margin: 0 10px;
+}
+.flex-fill {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  max-height: 60vh;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+}
+
+figure {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 25px;
+}
